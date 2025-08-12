@@ -1,10 +1,6 @@
 id: test-hardcoded-secret
 message: "Detected hardcoded secret"
 severity: warning
-language: javascript
+language: python
 rule:
-  pattern: |
-    const secret = "$SECRET"
-  where:
-    SECRET:
-      regex: "[a-zA-Z0-9]{20,}"
+  pattern: 'password = "$_"'
